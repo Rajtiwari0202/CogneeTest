@@ -1,0 +1,25 @@
+# Environment secrets — never commit these
+.env
+*.env
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.Python
+
+# Cognee local data
+.cognee/
+.cognee_system/
+
+# Node (for when you add the backend)
+node_modules/
+npm-debug.log
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
