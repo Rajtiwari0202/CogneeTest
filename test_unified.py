@@ -1,6 +1,6 @@
 import asyncio
 import os
-import dotenv import load_dotenv
+from dotenv import load_dotenv
 load_dotenv()
 # ─── THE ONE SWITCH ────────────────────────────────────────────────
 # Change this to flip between cloud and local. That's it.
