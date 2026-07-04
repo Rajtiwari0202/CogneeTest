@@ -1,5 +1,4 @@
-cognee==1.2.2
-python-dotenv==1.2.2
 fastapi
 uvicorn
-requests
+python-dotenv
+cognee

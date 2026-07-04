@@ -1,3 +1,5 @@
+# study_buddy/tutor.py
+
 import requests
 
 
@@ -6,6 +8,7 @@ OLLAMA_URL = "http://localhost:11434/api/generate"
 
 def generate_response(prompt: str) -> str:
     try:
+
         response = requests.post(
             OLLAMA_URL,
             json={
@@ -13,16 +16,17 @@ def generate_response(prompt: str) -> str:
                 "prompt": prompt,
                 "stream": False
             },
-            timeout=180
+            timeout=120
         )
 
         response.raise_for_status()
 
         data = response.json()
 
-        return data["response"]
+        return data.get(
+            "response",
+            "Sorry, I could not generate a response."
+        )
 
     except Exception as e:
-        return f"Error talking to Ollama: {str(e)}"import requests
-
-
+        return f"LLM Error: {str(e)}"
